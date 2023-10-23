@@ -23,45 +23,48 @@
     <title> {{company_name}} Careers</title>
 </head>
 <body>
+{% include 'nav.html' %}
 <div class="container">
     <h1 class="text-center mt-2 mb-4">Jovian careers</h1>
     <img
             class="img-fluid banner"
+            alt="banner"
             src="http://127.0.0.1:5000/static/images/banner.jpg"
     />
 
-    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-    <p class="lead">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        accusantium nesciunt cupiditate, eligendi aut labore earum tempore quia
-        ad illum magni doloribus iure ex, quos voluptatem dolore vero error
-        illo. Modi autem perferendis magni maiores commodi voluptatibus
-        doloribus eveniet maxime cumque quibusdam repellendus accusantium eos
-        ratione quam aut, reprehenderit explicabo architecto at. Reiciendis
-        deleniti alias facere dolor tenetur consequatur odit. Deserunt adipisci
-        deleniti minima molestias ipsum aliquid quae odio magni dolorum a sunt,
-        expedita architecto obcaecati itaque, cupiditate numquam tenetur enim
-        est error amet, ratione quod. Qui adipisci enim ut. Facere et aliquam
-        dolor! Ea voluptatem ducimus consectetur animi ipsam molestias
-        voluptate, recusandae quibusdam, exercitationem error tempore, labore
-        nobis. Quisquam dicta consequatur reiciendis earum ex exercitationem
-        quis totam error labore! Quasi a, consequatur sapiente aliquid
-        distinctio maxime, blanditiis, nobis iusto sit ratione et veritatis nisi
-        non sequi mollitia. Cumque maiores saepe consectetur omnis inventore
-        natus ducimus dolorem soluta reiciendis vero.
-    </p>
-
-    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <h2 class="text-center mt-2 mb-4" id="about">About Jovian</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+                accusantium nesciunt cupiditate, eligendi aut labore earum tempore quia
+                ad illum magni doloribus iure ex, quos voluptatem dolore vero error
+                illo. Modi autem perferendis magni maiores commodi voluptatibus
+                doloribus eveniet maxime cumque quibusdam repellendus accusantium eos
+                ratione quam aut, reprehenderit explicabo architecto at. Reiciendis
+                deleniti alias facere dolor tenetur consequatur odit. Deserunt adipisci
+                deleniti minima molestias ipsum aliquid quae odio magni dolorum a sunt,
+                expedita architecto obcaecati itaque, cupiditate numquam tenetur enim
+                est error amet, ratione quod.
+            </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/images/work.jpg" style="height: 320px; border-radius: 4px; margin-bottom: 16px"
+                 alt="work">
+        </div>
+    </div>
+    <h2 class="text-center mt-2 mb-4" id="positions">Open Positions</h2>
     <div>
         {% for job in jobs %}
         {% include 'job-item.html' %}
         {% endfor %}
     </div>
 
-    <div class="d-flex flex-column justify-content-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2023, Jovian</p>
+    <div class="text-center">
+        <a href="mailto:supernaturalmlady@gmail.com?subject=Question%20about%20Jobs&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20question%3A%20%3Cyour%20question%20here%3E"
+           class="btn btn-primary btn-lg">Contact Us</a>
     </div>
 </div>
+{% include 'footer.html' %}
 </body>
 </html>
